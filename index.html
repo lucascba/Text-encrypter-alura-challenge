@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+
+        <title>Encriptador de Texto - Alura Challenge </title>
+
+        <link rel="stylesheet" href="Styles/reset.css" />
+		<link rel="stylesheet" href="Styles/stylesheet.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <main>
+            <h1 class="title">Text Encrypter!</h1>
+
+            <ul>
+                <li class="textarea">
+                    <textarea id="Enc" cols="70" rows="10" placeholder="Type the text you want to encrypt"></textarea><br/>
+                    <input type="button" value="Encrypt" onclick="encryptText(textToEncrypt.value)" />
+                </li>
+                <li class="image">
+                    <img class="arrow" src="Images/arrows2.png" />
+                </li>
+                <li class="textarea">
+                    <textarea id="Desenc" cols="70" rows="10" placeholder="Type the text you want to unencrypt"></textarea><br/>
+                    <input type="button" value="Unencrypt" onclick="desencryptText(textToDesencrypt.value)" />
+                </li>
+            </ul>
+			
+			<script>
+				let textToEncrypt = document.getElementById("Enc");
+				let textToDesencrypt = document.getElementById("Desenc");
+
+				function encryptText(a){
+					let letter
+					let finalResult = ""
+					let string = a.length
+					for(let count = 0; count < string; count++) {
+						letter = a.charAt(count);
+						
+						if (letter.toLowerCase() == "a") {
+							finalResult = finalResult + "ai"
+						} else if(letter.toLowerCase() == "e") {
+							finalResult = finalResult + "enter"
+						} else if(letter.toLowerCase() == "i") {
+							finalResult = finalResult + "imes"
+						} else if(letter.toLowerCase() == "o") {
+							finalResult = finalResult + "ober"
+						} else if(letter.toLowerCase() == "u") {
+							finalResult = finalResult + "ufat"
+						} else {
+							finalResult = finalResult + letter
+						}
+					}
+					document.getElementById("Desenc").value = finalResult
+					document.getElementById("Enc").value = ""
+				}
+				function desencryptText(b) {
+					let letter
+					let finalResult = ""
+					let string = b.length
+					for(let count = 0; count < string; count++) {
+						letter = b.charAt(count);
+						finalResult = finalResult + letter
+						if (letter.toLowerCase() == "a") {
+							count++;
+						} else if(letter.toLowerCase() == "e") {
+							count = count + 4
+						} else if(letter.toLowerCase() == "i") {
+							count = count + 3
+						} else if(letter.toLowerCase() == "o") {
+							count = count + 3
+						} else if(letter.toLowerCase() == "u") {
+							count = count + 3
+						}
+					}
+					document.getElementById("Enc").value = finalResult
+					document.getElementById("Desenc").value = ""
+				}
+			</script>
+		
+		</main>
+    </body>
+</html>

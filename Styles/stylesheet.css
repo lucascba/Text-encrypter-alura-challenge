@@ -1,0 +1,61 @@
+body {
+	background: linear-gradient(lightblue,blue,darkblue);
+	color: yellow;
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+}
+.title {
+	text-align: center;
+	margin: 2em 0 2em 0;
+	font-size: 4em;
+}
+main ul {
+	width: 90%;
+	position: relative;
+	margin: 0 10%;
+}
+main ul li {
+	display: inline-block;
+	vertical-align: top;
+  }
+.textarea {
+	width: 30%;
+	padding: 2em 2em;
+	margin: 0 1.5%;
+}
+main ul li textarea {
+	width: 100%;
+	font-size: 2em;
+	display: inline;
+	text-align: center;
+	margin: 0 5% 0 5%;
+	vertical-align: top;
+}
+.image {
+	width: 10%;
+}
+.arrow {
+	width: 60%;
+	vertical-align: center;
+	margin: 70% 35% 0 35%;
+}
+main ul li input{
+	margin: 1.5em 70% 0 5%;
+	padding: 0.8em 1.4em;
+	font-weight: bold;
+	font-size: 1.1em;
+	background-color: #168984;
+	color: white;
+	text-shadow: 0.05em 0.05em 3px black;
+	border: 0;
+	box-shadow: 0.02em 0.02em 2px #003331;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transition: 0.2s font-size, 0.3s background-color;
+	cursor: pointer;
+}
+main ul li input:hover{
+	font-size: 1.12em;
+	color: white;
+	background-color: #289c97;
+}
