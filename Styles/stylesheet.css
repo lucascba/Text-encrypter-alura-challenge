@@ -1,6 +1,5 @@
 body {
-	background: linear-gradient(lightblue,blue,darkblue);
-	color: yellow;
+	background: #263b69;
 	font-family: 'Open Sans', sans-serif;
 	height: 100%;
 }
@@ -25,11 +24,26 @@ main ul li {
 }
 main ul li textarea {
 	width: 100%;
-	font-size: 2em;
+	height: 5em;
+	font-size: 1.5em;
+	padding: 5%;
 	display: inline;
-	text-align: center;
+	text-align: justify;
 	margin: 0 5% 0 5%;
 	vertical-align: top;
+	opacity: 0.5;
+	transition: 0.3s opacity;
+	border-radius: 10px;
+	background-color: #bec9cf;
+}
+main ul li textarea:hover{
+	opacity: 0.8;
+}
+main ul li textarea:focus{
+	opacity: 0.8;
+}
+main ul li textarea:focus::placeholder{
+	color: transparent;
 }
 .image {
 	width: 10%;
@@ -37,10 +51,10 @@ main ul li textarea {
 .arrow {
 	width: 60%;
 	vertical-align: center;
-	margin: 70% 35% 0 35%;
+	margin: 70% 25% 0 50%;
 }
-main ul li input{
-	margin: 1.5em 70% 0 5%;
+.mainbutton{
+	margin: 1.5em 2.5% 0 5%;
 	padding: 0.8em 1.4em;
 	font-weight: bold;
 	font-size: 1.1em;
@@ -54,8 +68,37 @@ main ul li input{
 	transition: 0.2s font-size, 0.3s background-color;
 	cursor: pointer;
 }
-main ul li input:hover{
+.mainbutton:hover{
 	font-size: 1.12em;
 	color: white;
 	background-color: #289c97;
+}
+.copybutton {
+	margin: 1.5em 10% 0 5%;
+	padding: 0.8em 1.4em;
+	font-weight: bold;
+	font-size: 1.1em;
+	background-color: #168984;
+	color: white;
+	text-shadow: 0.05em 0.05em 3px black;
+	border: 0;
+	box-shadow: 0.02em 0.02em 2px #003331;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transition: 0.2s font-size, 0.3s background-color;
+	cursor: pointer;
+}
+.copybutton:hover{
+	font-size: 1.12em;
+	color: white;
+	background-color: #289c97;
+}
+.copybutton:focus{
+	background-color: #80d18a;
+}
+.footnote {
+	text-align: center;
+	margin: 4em 0 2em 0;
+	color: #d6def0;
+	text-shadow: 0.05em 0.05em 3px black;
 }
