@@ -87,6 +87,7 @@ main ul li textarea:focus::placeholder{
 	box-sizing: border-box;
 	transition: 0.2s font-size, 0.3s background-color;
 	cursor: pointer;
+	fill: currentColor;
 }
 .copybutton:hover{
 	font-size: 1.12em;
@@ -101,4 +102,18 @@ main ul li textarea:focus::placeholder{
 	margin: 4em 0 2em 0;
 	color: #d6def0;
 	text-shadow: 0.05em 0.05em 3px black;
+}
+.github {
+	display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: #00d5f1;
+    margin: 0 0 0 0.8em;
+}
+.linkedin {
+	display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: #00d5f1;
+    margin: 0 0 0.4em 0.8em;
 }
