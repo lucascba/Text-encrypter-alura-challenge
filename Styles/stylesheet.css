@@ -1,12 +1,28 @@
-body {
-	background: #263b69;
+body,html {
 	font-family: 'Open Sans', sans-serif;
-	height: 100%;
+	background-color: #263b69;
+}
+header {
+	background: url(../images/header-bg.jpg);
+	margin: 0 auto;
+	position: relative;
+	padding: 0.01vw 0;
+
+}
+header h1{
+	color: midnightblue;
+	text-shadow: 1px 1px 4px #d6def0;
+	margin: 0;
+	padding: 0;
+	position: relative;
 }
 .title {
 	text-align: center;
 	margin: 2em 0 2em 0;
 	font-size: 4em;
+}
+main {
+	margin: 3% 0 5% 0;
 }
 main ul {
 	width: 90%;
@@ -22,7 +38,7 @@ main ul li {
 	padding: 2em 2em;
 	margin: 0 1.5%;
 }
-main ul li textarea {
+.textarea textarea {
 	width: 100%;
 	height: 5em;
 	font-size: 1.5em;
@@ -31,18 +47,20 @@ main ul li textarea {
 	text-align: justify;
 	margin: 0 5% 0 5%;
 	vertical-align: top;
-	opacity: 0.5;
+	opacity: 0.3;
 	transition: 0.3s opacity;
 	border-radius: 10px;
 	background-color: #bec9cf;
+	resize: vertical;
+	max-height: 14vw;
 }
-main ul li textarea:hover{
+.textarea textarea:hover{
 	opacity: 0.8;
 }
-main ul li textarea:focus{
+.textarea textarea:focus{
 	opacity: 0.8;
 }
-main ul li textarea:focus::placeholder{
+.textarea textarea:focus::placeholder{
 	color: transparent;
 }
 .image {
@@ -54,27 +72,39 @@ main ul li textarea:focus::placeholder{
 	margin: 70% 25% 0 50%;
 }
 .mainbutton{
-	margin: 1.5em 2.5% 0 5%;
+	margin: 2.2em 2.5% 0 5%;
 	padding: 0.8em 1.4em;
 	font-weight: bold;
 	font-size: 1.1em;
-	background-color: #168984;
+	background-color: #16898455;
 	color: white;
 	text-shadow: 0.05em 0.05em 3px black;
 	border: 0;
 	box-shadow: 0.02em 0.02em 2px #003331;
 	border-radius: 10px;
 	box-sizing: border-box;
-	transition: 0.2s font-size, 0.3s background-color;
+	transition: 0.2s font-size, 0.3s background-color, 0.2s padding;
 	cursor: pointer;
 }
 .mainbutton:hover{
-	font-size: 1.12em;
+	font-size: 1.15em;
+	padding: 0.67em 1.26em 0.75em 1.27em;
 	color: white;
 	background-color: #289c97;
 }
+#error,#error2 {
+	margin: 0.4em 1.6%;
+	display:inline;
+	position: absolute;
+	padding: 0.3em;
+	color: #FF0000;
+	text-shadow: 0.07em 0.07em 1px #000000;
+	background: #FFCDC333;
+	border: 1px solid #00000033;
+	border-radius: 8px;
+}
 .copybutton {
-	margin: 1.5em 10% 0 5%;
+	margin: 2.2em 10% 0 5%;
 	padding: 0.8em 1.4em;
 	font-weight: bold;
 	font-size: 1.1em;
@@ -97,23 +127,51 @@ main ul li textarea:focus::placeholder{
 .copybutton:focus{
 	background-color: #80d18a;
 }
-.footnote {
-	text-align: center;
-	margin: 4em 0 2em 0;
+footer {
+	background-color: #00000055;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+footer hr{
+  border: 0;
+  height: 1px;
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+.center-ball{
+    background: black;
+}
+footer div {
+	display: block;
+	width: 60%;
+	margin: 2em auto;
+	vertical-align: bottom;
+}
+.copyright {
+	margin: 4em 0.2em 2em 40%;
 	color: #d6def0;
 	text-shadow: 0.05em 0.05em 3px black;
+	display: inline;
 }
 .github {
-	display: inline-block;
-    overflow: visible !important;
-    vertical-align: text-bottom;
-    fill: #00d5f1;
-    margin: 0 0 0 0.8em;
+	margin: 0 0.2em;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  display: inline-block;
 }
 .linkedin {
-	display: inline-block;
-    overflow: visible !important;
-    vertical-align: text-bottom;
-    fill: #00d5f1;
-    margin: 0 0 0.4em 0.8em;
+	overflow: visible !important;
+	margin: 0 0.2em;
+  vertical-align: text-top;
+  display: inline-block;
+
+}
+.github-ico {
+	fill: #00d5f1;
+}
+.linkedin-ico {
+	fill: #00d5f1;
 }
