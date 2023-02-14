@@ -5,7 +5,7 @@ function encryptText(){
 	let string = textToEncrypt.length;
 	for(let count = 0; count < string; count++) {
 		letter = textToEncrypt.charAt(count);
-		if (letter < 'a' || letter > 'z') {
+		if (letter < 'a' && letter != ' ' || letter > 'z') {
 			document.getElementById("error").textContent = "⚠️Uppercase and special characters are forbidden.⚠️";
 			document.getElementById("error").style = "";
 			document.getElementById("Enc").value = "";
@@ -44,7 +44,7 @@ function decryptText() {
 		letter = textToDecrypt.charAt(count);
 		finalResult = finalResult + letter;
 
-		if (letter < 'a' || letter > 'z') {
+		if (letter < 'a' && letter != ' ' || letter > 'z') {
 			document.getElementById("error2").textContent = "⚠️Uppercase and special characters are forbidden.⚠️";
 			document.getElementById("error2").style = "";
 			document.getElementById("Dec").value = "";

@@ -1,20 +1,22 @@
 body,html {
 	font-family: 'Open Sans', sans-serif;
 	background-color: #263b69;
+	height: 100vh;
+	margin: 0
 }
 header {
 	background: url(../images/header-bg.jpg);
 	margin: 0 auto;
-	position: relative;
-	padding: 0.01vw 0;
-
+	display: flex;
+	height: 20vh;
+	justify-content: center;
+	flex-direction: column;
 }
 header h1{
 	color: midnightblue;
 	text-shadow: 1px 1px 4px #d6def0;
 	margin: 0;
 	padding: 0;
-	position: relative;
 }
 .title {
 	text-align: center;
@@ -23,36 +25,38 @@ header h1{
 }
 main {
 	margin: 3% 0 5% 0;
+	display: flex;
+	justify-content: center;;
 }
 main ul {
-	width: 90%;
-	position: relative;
-	margin: 0 10%;
-}
-main ul li {
 	display: inline-block;
-	vertical-align: top;
-  }
+	text-align: center;
+}
 .textarea {
-	width: 30%;
-	padding: 2em 2em;
-	margin: 0 1.5%;
+	max-width: 90%;
+	height: auto;
+	margin: 2vh auto;
+	display: block;
 }
 .textarea textarea {
-	width: 100%;
-	height: 5em;
+	width: 50%;
+	min-width: 280px;
 	font-size: 1.5em;
-	padding: 5%;
+	padding: 2%;
 	display: inline;
 	text-align: justify;
-	margin: 0 5% 0 5%;
+	margin: 0 auto;
 	vertical-align: top;
 	opacity: 0.3;
 	transition: 0.3s opacity;
 	border-radius: 10px;
 	background-color: #bec9cf;
 	resize: vertical;
-	max-height: 14vw;
+	max-height: 100%;
+}
+#description {
+	resize: none;
+	width: 400px;
 }
 .textarea textarea:hover{
 	opacity: 0.8;
@@ -63,16 +67,8 @@ main ul li {
 .textarea textarea:focus::placeholder{
 	color: transparent;
 }
-.image {
-	width: 10%;
-}
-.arrow {
-	width: 60%;
-	vertical-align: center;
-	margin: 70% 25% 0 50%;
-}
 .mainbutton{
-	margin: 2.2em 2.5% 0 5%;
+	margin: 0;
 	padding: 0.8em 1.4em;
 	font-weight: bold;
 	font-size: 1.1em;
@@ -85,6 +81,7 @@ main ul li {
 	box-sizing: border-box;
 	transition: 0.2s font-size, 0.3s background-color, 0.2s padding;
 	cursor: pointer;
+	vertical-align: middle;
 }
 .mainbutton:hover{
 	font-size: 1.15em;
@@ -104,7 +101,7 @@ main ul li {
 	border-radius: 8px;
 }
 .copybutton {
-	margin: 2.2em 10% 0 5%;
+	margin: 0;
 	padding: 0.8em 1.4em;
 	font-weight: bold;
 	font-size: 1.1em;
@@ -118,6 +115,7 @@ main ul li {
 	transition: 0.2s font-size, 0.3s background-color;
 	cursor: pointer;
 	fill: currentColor;
+	display: inline;
 }
 .copybutton:hover{
 	font-size: 1.12em;
@@ -129,10 +127,12 @@ main ul li {
 }
 footer {
 	background-color: #00000055;
-	position: absolute;
+	/*position: absolute;
 	bottom: 0;
 	right: 0;
-	left: 0;
+	left: 0;*/
+	display: flex; 
+	flex-direction: column; 
 }
 footer hr{
   border: 0;
@@ -144,29 +144,34 @@ footer hr{
 .center-ball{
     background: black;
 }
-footer div {
-	display: block;
-	width: 60%;
-	margin: 2em auto;
-	vertical-align: bottom;
+footer section {
+	height: 30px;
+    flex-shrink: 0; 
+	flex: 1 0 auto; 
+	margin: 2vh 0;
+}
+footer section div {
+	width: 220px;
+	margin: 0 auto;
 }
 .copyright {
-	margin: 4em 0.2em 2em 40%;
+	width: 
+	margin: 4em 0.2em 2em auto;
 	color: #d6def0;
 	text-shadow: 0.05em 0.05em 3px black;
 	display: inline;
 }
 .github {
 	margin: 0 0.2em;
-  overflow: visible !important;
-  vertical-align: text-bottom;
-  display: inline-block;
+	overflow: visible !important;
+	vertical-align: text-bottom;
+	display: inline-block;
 }
 .linkedin {
 	overflow: visible !important;
 	margin: 0 0.2em;
-  vertical-align: text-top;
-  display: inline-block;
+ 	vertical-align: text-top;
+ 	display: inline-block;
 
 }
 .github-ico {
